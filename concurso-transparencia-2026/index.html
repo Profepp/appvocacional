@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0f1c">
+<title>¿Por qué me rechazaron?</title>
+<style>
+:root{--bg:#0a0f1c;--panel:#111827;--panel2:#182235;--text:#f8fafc;--muted:#a8b3c7;--danger:#ff5c6c;--accent:#6ea8ff;--warning:#ffc857;--line:#26344d}
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+body{min-height:100dvh;display:flex;justify-content:center}
+.app{width:min(100%,460px);min-height:100dvh;padding:22px 18px 30px;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
+.brand{font-weight:800;font-size:15px}.tag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 9px}
+.screen{display:none;flex:1}.screen.active{display:flex;flex-direction:column}
+.eyebrow{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+h1{font-size:34px;line-height:1.05;margin:0 0 12px}h2{font-size:27px;line-height:1.1;margin:0 0 12px}
+p{font-size:16px;line-height:1.5;color:var(--muted);margin:0 0 18px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;padding:18px;margin:10px 0}
+.status{display:flex;gap:12px;align-items:center}.dot{width:13px;height:13px;border-radius:50%;background:var(--danger)}
+.status-title{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.status-big{font-weight:900;font-size:30px;margin-top:3px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.mini{background:#0d1524;border:1px solid var(--line);border-radius:15px;padding:12px}
+.mini small,.data-row small{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}
+button{border:0;border-radius:18px;padding:16px 18px;font-weight:800;font-size:16px;width:100%;margin-top:10px}
+.primary{background:var(--accent);color:#07101f}.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.why{font-size:22px;padding:19px}.hint{text-align:center;color:var(--muted);font-size:12px;margin-top:10px}
+.data-row{display:flex;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.data-row:last-child{border-bottom:0}
+.icon{width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:#0d1524;display:grid;place-items:center;font-size:18px}
+.data-row strong{font-size:15px}.alert{border:1px solid rgba(255,200,87,.35);background:rgba(255,200,87,.08);border-radius:18px;padding:15px;margin-top:12px}
+.alert b{display:block;color:var(--warning);margin-bottom:5px}.alert p{font-size:14px;margin:0;color:#d8d0b0}
+.success{display:grid;place-items:center;text-align:center;flex:1;padding:20px 0}.success-circle{width:86px;height:86px;border-radius:50%;display:grid;place-items:center;font-size:42px;background:rgba(66,211,146,.12);margin:0 auto 20px}
+.quote{font-size:24px;line-height:1.24;font-weight:900;color:#fff;margin-top:18px}.footer{padding-top:16px;color:#69758a;font-size:10px;text-align:center}
+</style>
+</head>
+<body>
+<main class="app">
+<div class="topbar"><div class="brand">PORTAL CIUDADANO</div><div class="tag">Demo educativa</div></div>
+
+<section class="screen active" id="s1">
+<div class="eyebrow">Estado de postulación</div><h1>Resultado disponible</h1>
+<p>Consulta el estado de tu solicitud y la información asociada al proceso.</p>
+<div class="card">
+<div class="status"><span class="dot"></span><div><div class="status-title">Resultado</div><div class="status-big">RECHAZADA</div></div></div>
+<div class="meta"><div class="mini"><small>Solicitud</small><b>#A-2048</b></div><div class="mini"><small>Fecha</small><b>10 ago 2026</b></div></div>
+</div>
+<button class="ghost" onclick="showScreen(2)">Más información</button>
+<div class="hint">La decisión fue generada mediante un sistema automatizado.</div>
+</section>
+
+<section class="screen" id="s2">
+<div class="eyebrow">Detalle del resultado</div><h2>Resultado automático</h2>
+<p>La solicitud no cumple con los criterios del sistema.</p>
+<div class="card">
+<div class="data-row"><div class="icon">⚙️</div><div><small>Tipo de decisión</small><strong>Evaluación automatizada</strong></div></div>
+<div class="data-row"><div class="icon">📄</div><div><small>Motivo informado</small><strong>No disponible</strong></div></div>
+</div>
+<button class="primary why" onclick="showScreen(3)">¿POR QUÉ?</button>
+<div class="hint">Toda decisión que afecta tu vida debería poder explicarse.</div>
+</section>
+
+<section class="screen" id="s3">
+<div class="eyebrow">Explicación de la decisión</div><h2>Esto influyó en el resultado</h2>
+<p>Información presentada en lenguaje claro y verificable.</p>
+<div class="card">
+<div class="data-row"><div class="icon">🧾</div><div><small>Dato utilizado</small><strong>Domicilio registrado</strong></div></div>
+<div class="data-row"><div class="icon">📍</div><div><small>Valor considerado</small><strong>Dirección anterior</strong></div></div>
+<div class="data-row"><div class="icon">🏛️</div><div><small>Responsable</small><strong>Institución pública</strong></div></div>
+<div class="data-row"><div class="icon">🤖</div><div><small>Intervención humana</small><strong>No registrada</strong></div></div>
+</div>
+<div class="alert"><b>⚠ Posible dato desactualizado</b><p>Puedes solicitar corrección de información y una revisión realizada por una persona.</p></div>
+<button class="primary" onclick="showScreen(4)">Solicitar revisión humana</button>
+</section>
+
+<section class="screen" id="s4">
+<div class="success"><div><div class="success-circle">✓</div><div class="eyebrow">Solicitud enviada</div><h2>Revisión humana solicitada</h2>
+<p>La institución deberá revisar los antecedentes y explicar el resultado.</p>
+<div class="quote">“Si una decisión afecta tu vida, tienes derecho a entenderla.”</div>
+<button class="ghost" onclick="showScreen(1)">Reiniciar demo</button></div></div>
+</section>
+
+<div class="footer">Prototipo ficticio para cápsula audiovisual escolar · 2026</div>
+</main>
+<script>
+function showScreen(n){
+document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+document.getElementById('s'+n).classList.add('active');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
