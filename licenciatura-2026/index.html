@@ -97,7 +97,7 @@ body{margin:0;background:#e8f1f8;color:var(--ink);font-family:'DM Sans',-apple-s
 <input class="course-radio" type="radio" name="curso" id="course-a" value="4MA" aria-label="4° Medio A">
 <input class="course-radio" type="radio" name="curso" id="course-b" value="4MB" aria-label="4° Medio B">
 <div class="tools"><input class="search" type="search" id="search" placeholder="Buscar por nombre o apellido" aria-label="Buscar estudiantes" autocomplete="off"><div class="filters" role="group" aria-label="Filtrar estudiantes por curso"><label class="filter" for="course-all">Todos</label><label class="filter" for="course-a">4° Medio A</label><label class="filter" for="course-b">4° Medio B</label></div></div>
-<p id="counter" class="counter" aria-live="polite"><span class="count-all">85 estudiantes</span><span class="count-a">43 estudiantes</span><span class="count-b">42 estudiantes</span></p><ul class="students-list" id="students"><li class="student-row" data-class="4MB" data-name="aguin sáez tomás alonso"><span class="student-name">Aguin Sáez Tomás Alonso</span><span class="class-tag">4° Medio B</span></li>
+<p id="counter" class="counter" aria-live="polite"><span class="count-all">84 estudiantes</span><span class="count-a">43 estudiantes</span><span class="count-b">41 estudiantes</span></p><ul class="students-list" id="students"><li class="student-row" data-class="4MB" data-name="aguin sáez tomás alonso"><span class="student-name">Aguin Sáez Tomás Alonso</span><span class="class-tag">4° Medio B</span></li>
 <li class="student-row" data-class="4MB" data-name="aillón maripangue angel alfredo"><span class="student-name">Aillón Maripangue Angel Alfredo</span><span class="class-tag">4° Medio B</span></li>
 <li class="student-row" data-class="4MB" data-name="aliste huenumilla vicente andres"><span class="student-name">Aliste Huenumilla Vicente Andres</span><span class="class-tag">4° Medio B</span></li>
 <li class="student-row" data-class="4MA" data-name="alvarado linconao agustina antonia"><span class="student-name">Alvarado Linconao Agustina Antonia</span><span class="class-tag">4° Medio A</span></li>
@@ -148,7 +148,7 @@ body{margin:0;background:#e8f1f8;color:var(--ink);font-family:'DM Sans',-apple-s
 <li class="student-row" data-class="4MB" data-name="oliva carrasco catalina antonia"><span class="student-name">Oliva Carrasco Catalina Antonia</span><span class="class-tag">4° Medio B</span></li>
 <li class="student-row" data-class="4MB" data-name="oliva fernández maria jesús"><span class="student-name">Oliva Fernández Maria Jesús</span><span class="class-tag">4° Medio B</span></li>
 <li class="student-row" data-class="4MB" data-name="oliva fernández paula antonia"><span class="student-name">Oliva Fernández Paula Antonia</span><span class="class-tag">4° Medio B</span></li>
-<li class="student-row" data-class="4MB" data-name="oliva vega eliot felipe"><span class="student-name">Oliva Vega Eliot Felipe</span><span class="class-tag">4° Medio B</span></li>
+
 <li class="student-row" data-class="4MB" data-name="oñate carvajal paula renata"><span class="student-name">Oñate Carvajal Paula Renata</span><span class="class-tag">4° Medio B</span></li>
 <li class="student-row" data-class="4MA" data-name="osorio mora vanessa anais"><span class="student-name">Osorio Mora Vanessa Anais</span><span class="class-tag">4° Medio A</span></li>
 <li class="student-row" data-class="4MB" data-name="parra vera joaquín alonso"><span class="student-name">Parra Vera Joaquín Alonso</span><span class="class-tag">4° Medio B</span></li>
@@ -207,7 +207,7 @@ body{margin:0;background:#e8f1f8;color:var(--ink);font-family:'DM Sans',-apple-s
     if (query) {
       counter.textContent = visible + (visible === 1 ? ' estudiante' : ' estudiantes');
     } else {
-      counter.innerHTML = '<span class="count-all">85 estudiantes</span><span class="count-a">43 estudiantes</span><span class="count-b">42 estudiantes</span>';
+      counter.innerHTML = '<span class="count-all">84 estudiantes</span><span class="count-a">43 estudiantes</span><span class="count-b">41 estudiantes</span>';
     }
     empty.style.display = visible ? 'none' : 'block';
   }
